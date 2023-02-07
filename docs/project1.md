@@ -34,7 +34,7 @@ When constructing the robot, we considered the battery life and decided to have 
 ## Summary
 
 
-## Part List
+## Parts List
 
 | Name | Description | Quantity |
 | --- | --- | --- |
