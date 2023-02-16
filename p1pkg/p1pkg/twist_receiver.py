@@ -67,8 +67,10 @@ class MinimalSubscriber(Node):
             backward_left()
         elif msg.linear.x < 0 and msg.angular.z > 0: 
             backward_right()
-        else:
+        elif msg.linear.x == 0 and msg.angular.z == 0: 
             bot.stop()
+
+        
 
 
         
