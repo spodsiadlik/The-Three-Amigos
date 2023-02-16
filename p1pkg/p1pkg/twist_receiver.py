@@ -22,11 +22,11 @@ from time import sleep
 bot = PhaseEnableRobot(right = (13, 26), left = (25, 24))
 
 def forward_right():
-    bot.left_motor(1)
-    bot.right_motor(0.6)
+    bot.left_motor.forward(1)
+    bot.right_motor.forward(0.6)
 def forward_left():
-    bot.left_motor(0.6)
-    bot.right_motor(1)
+    bot.left_motor.forward(0.6)
+    bot.right_motor.forward(1)
 def backward_right():
     bot.left_motor.backward(1)
     bot.right_motor.backward(0.6)
