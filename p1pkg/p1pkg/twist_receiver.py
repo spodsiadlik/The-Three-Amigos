@@ -14,11 +14,19 @@
 
 import rclpy
 from rclpy.node import Node
-
 from std_msgs.msg import String
-
 from geometry_msgs.msg import Twist
+from gpiozero import PhaseEnableMotor
+from time import sleep
 
+bot = PhaseEnableMotor(right = (13, 26), left = (25, 24))
+
+def forward_right():
+    bot.left_motor(1)
+    bot.right_motor(0.6)
+def foward_right():
+    bot.left_motor(0.6)
+    bot.right_motor(1)
 
 class MinimalSubscriber(Node):
 
@@ -35,7 +43,19 @@ class MinimalSubscriber(Node):
         
 
     def listener_callback(self, msg):
-        print(msg)
+        print(msg.linear.x)
+        print(msg.angular.z)
+        if msg.linear.x > 0 and msg.angular.z == 0: 
+            bot.forward(0.5)
+        # elif msg.linear.x < 0 and msg.angular.z == 0:
+        #     bot. backward()
+        # elif msg.linear.x == 0 and msg.angular.z > 0:
+        #     bot.left()
+        # elif msg.linear.x == 0 and msg.angular.z < 0:
+        #     bot.right()
+        else:
+            bot.stop()
+        
         
 
 
