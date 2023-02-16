@@ -24,7 +24,7 @@ bot = PhaseEnableRobot(right = (13, 26), left = (25, 24))
 def forward_right():
     bot.left_motor(1)
     bot.right_motor(0.6)
-def foward_right():
+def forward_left():
     bot.left_motor(0.6)
     bot.right_motor(1)
 def backward_right():
@@ -54,19 +54,19 @@ class MinimalSubscriber(Node):
         if msg.linear.x > 0 and msg.angular.z == 0: 
             bot.forward(0.5)
         elif msg.linear.x < 0 and msg.angular.z == 0:
-            bot. backward()
+            bot.backward()
         elif msg.linear.x == 0 and msg.angular.z > 0:
             bot.left()
         elif msg.linear.x == 0 and msg.angular.z < 0:
             bot.right()
         elif msg.linear.x > 0 and msg.angular.z > 0:
-            bot.forward.left()
+            forward_left()
         elif msg.linear.x > 0 and msg.angular.z < 0:
-            bot.forward_right()
+            forward_right()
         elif msg.linear.x < 0 and msg.angular.z < 0: 
-            bot.backward_left()
+            backward_left()
         elif msg.linear.x < 0 and msg.angular.z > 0: 
-            bot.backward_right()
+            backward_right()
         else:
             bot.stop()
 
