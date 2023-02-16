@@ -16,10 +16,10 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
 from geometry_msgs.msg import Twist
-from gpiozero import PhaseEnableMotor
+from gpiozero import PhaseEnableRobot
 from time import sleep
 
-bot = PhaseEnableMotor(right = (13, 26), left = (25, 24))
+bot = PhaseEnableRobot(right = (13, 26), left = (25, 24))
 
 def forward_right():
     bot.left_motor(1)
