@@ -27,6 +27,12 @@ def forward_right():
 def foward_right():
     bot.left_motor(0.6)
     bot.right_motor(1)
+def backward_right():
+    bot.left_motor.backward(1)
+    bot.right_motor.backward(0.6)
+def backward_left():
+    bot.left_motor.backward(0.6)
+    bot.right_motor.backward(1)
 
 class MinimalSubscriber(Node):
 
@@ -47,14 +53,26 @@ class MinimalSubscriber(Node):
         print(msg.angular.z)
         if msg.linear.x > 0 and msg.angular.z == 0: 
             bot.forward(0.5)
-        # elif msg.linear.x < 0 and msg.angular.z == 0:
-        #     bot. backward()
-        # elif msg.linear.x == 0 and msg.angular.z > 0:
-        #     bot.left()
-        # elif msg.linear.x == 0 and msg.angular.z < 0:
-        #     bot.right()
+        elif msg.linear.x < 0 and msg.angular.z == 0:
+            bot. backward()
+        elif msg.linear.x == 0 and msg.angular.z > 0:
+            bot.left()
+        elif msg.linear.x == 0 and msg.angular.z < 0:
+            bot.right()
+        elif msg.linear.x > 0 and msg.angular.z > 0:
+            bot.forward.left()
+        elif msg.linear.x > 0 and msg.angular.z < 0:
+            bot.forward_right()
+        elif msg.linear.x < 0 and msg.angular.z < 0: 
+            bot.backward_left()
+        elif msg.linear.x < 0 and msg.angular.z > 0: 
+            bot.backward_right()
         else:
             bot.stop()
+
+
+        
+
         
         
 
