@@ -26,10 +26,43 @@ The wheel has a radius of 8.4 cm.
 
 Payload capacity.
 
+
+
 Battery (minimum) life span
 When constructing the robot, we considered the battery life and decided to have two separate power supplies: one to power the motors and one to power the Raspberry Pi and the RPi Pico. Then, the batteries wouldn't be simultaneously drained by both components, and we could individually power each part. The first type of power supply uses three lithium ion batteries to power our motors, and we chose this specific method because the batteries were easily removable. Because of that, we wouldn't need to disassemble anything to recharge the batteries, and they would be much less dangerous that LiPo batteries. Our other power source would be an Anker Power Bank, which we could use to power the Pi and Pico. It would last much longer than the batteries, so it would need to be recharged less.
 
+Finding capacity of Lithium Ion batteries, then determine how much power is used by the motors
+OR Filluy charge the batteries and manually discharge them to 9V.
+
+
+Safety Features
+One of the most important considerations that we had while designing our robot was involving safety features, since we want to make sure that our bot is safe to use. We considered two different types of safety additions: physical and software features. The main physical safety feature that we included was bumpers made of weather 
+stripping that could reduce damamge if the bot bumped into anything. It was placed strategically on the corners and sharper edges of the bot in order to maximize its effieciency.
+
+Software safety features
+-Key used to stop the bot
+CTRL-C is used interrupt and stop the program
+
+Physical safety features
+-Weather Stripping to round off sharp edges
+-Tying down cables
+
 ## Evaluation
+Leaving space for future additions (Lidar, PiCamera, Pico)
+
+PhaseEnableRobot class
+ROS Workspace
+
+| Function | Linear Velocity (x) | Angular Velocity (z) |
+| forward | Positive | Zero |
+| forward_left | Positive | Positive |
+| forward_right | Positive | Negative |
+| left | Zero | Positive |
+| right | Zero | Negative |
+| backward | Negative | Zero |
+| backward_left | Negative | Negative |
+| backward_right | Negative | Positive |
+| STOP | Zero | Zero |
 
 ## Summary
 
