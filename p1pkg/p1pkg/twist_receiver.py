@@ -52,9 +52,9 @@ class MinimalSubscriber(Node):
         print(msg.linear.x)
         print(msg.angular.z)
         if msg.linear.x > 0 and msg.angular.z == 0: 
-            bot.forward(0.5)
+            bot.forward(1)
         elif msg.linear.x < 0 and msg.angular.z == 0:
-            bot.backward(0.5)
+            bot.backward(1)
         elif msg.linear.x == 0 and msg.angular.z > 0:
             bot.left(0.5)
         elif msg.linear.x == 0 and msg.angular.z < 0:
