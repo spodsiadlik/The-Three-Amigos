@@ -54,6 +54,7 @@ PhaseEnableRobot class
 ROS Workspace
 
 | Function | Linear Velocity (x) | Angular Velocity (z) |
+| --- | --- | --- |
 | forward | Positive | Zero |
 | forward_left | Positive | Positive |
 | forward_right | Positive | Negative |
