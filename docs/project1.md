@@ -16,19 +16,17 @@ experiments and/or analyzes.
 
 # Analysis
 
-## Robot weight
-
+## Robot Weight
 The weight of the robot was one of our initial concerns, and we consequently used lighter materials in the construction of the robot. We still used the aluminum extrusions for our base frame, but instead of using wood or metal for our second level, we used an acrylic sheet that would allow us to easily mount everything we needed. We also used a 3-D printer to print any extra additions we needed, including a mount for the PiCamera (which will be used in future projects), a base for the Lidar and RPi (using the same design as the one from last semester), and small platforms that allow us to lower our caster wheels to the same height as the skateboard wheels. In the end, the robot ended up having a mass of 5.2 kilograms (or 11.47 pounds).
 
-## Base dimensions (include the add-ons).
+## Base Dimensions (include the add-ons).
 
-## Max speed (linear, angular).
-The wheel has a radius of 8.4 cm.
-Linear: 0.5 m/s
-Angular: 4pi radians in 4.7 seconds
-Payload capacity.
+## Maximum Speed
+When determining the speed our robot, we used different methods for finding the linear and angular velocities of the robot. To determine the linear velocity, we set up markers at every meter along the floor for four meters. Then, we drove our robot forward at its maximum speed and used a stopwatch (with a lap feature) to find how long it took to reach marker. Then, we averaged each lap value to determine the overall speed of the bot, and we determined that it took around 2 seconds to reach each marker. Therefore, it had a linear speed of 0.5 m/s.
+Next, we wanted to find the angular velocity, so we had the robot rotate in a circle for 2 rotations and determined how long it took to accomplish that task. In the end, it to 4.7 seconds to rotate twice, so it has an angular velocity of 0.85pi radians/s.
 
- 
+## Payload Capacity
+To test the payload capacity, we added 2kg masses one by one onto our robot while it was running until the robot stopped working. However, after adding 6 of those masses, the robot was still functioning extremely well and we were risking destroying our acrylic sheet. Therefore, we stopped at that weight because we did not feel that it was worth risking our robot's functionality to add more weight. Overall, we determined that the payload capacity of our robot was at least 12 kilograms (or 26.46 pounds).
 
 ## Battery (minimum) life span
 When constructing the robot, we considered the battery life and decided to have two separate power supplies: one to power the motors and one to power the Raspberry Pi and the RPi Pico. Then, the batteries wouldn't be simultaneously drained by both components, and we could individually power each part. The first type of power supply uses three lithium ion batteries to power our motors, and we chose this specific method because the batteries were easily removable. Because of that, we wouldn't need to disassemble anything to recharge the batteries, and they would be much less dangerous that LiPo batteries. Our other power source would be an Anker Power Bank, which we could use to power the Pi and Pico. It would last much longer than the batteries, so it would need to be recharged less.
@@ -64,6 +62,8 @@ We also include two different software features to terminate the program. The fi
 Leaving space for future additions (Lidar, PiCamera, Pico)
 
 Lifts for the caster wheels
+
+The wheel has a radius of 8.4 cm.
 
 Twist listener
 PhaseEnableRobot class
