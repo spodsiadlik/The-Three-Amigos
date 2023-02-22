@@ -22,8 +22,11 @@ The weight of the robot was one of our initial concerns, and we consequently use
 ## Base Dimensions
 When considering the design for our robot, we were thinking ahead to the end goal and how we planned to use it when mapping out the CCCS building. To accomplish this, we decided to make the base of our robot a perfect square (or as close to one as we could make by cutting an acrylic sheet) with dimensions of 0.37 meters by 0.375 meters. This also allowed us to have more than enough space to mount all of our components. Lastly, we used the robot chassis design from last semester to create two layers, allowing us to mount our Lidar on top of the bot for future navigation projects. Overall, this addition made the height of the robot 0.22 meters.
 
+![Aluminum Extrusion Frame](https://user-images.githubusercontent.com/112110593/220675392-b7bee21e-1ffa-4ef2-9d62-bb76b9cf2d10.JPG)
+
+
 ## Wiring Diagram
-[Circuit Diagram - Robotics II (1).pdf](https://github.com/spodsiadlik/The-Three-Amigos/files/10805536/Circuit.Diagram.-.Robotics.II.1.pdf)
+![Circuit Diagram - Fourth Amigo](https://user-images.githubusercontent.com/112110593/220675232-cb4112af-a8b4-48c7-9ff0-9cb7bf532950.JPG)
 
 
 ## Maximum Speed
