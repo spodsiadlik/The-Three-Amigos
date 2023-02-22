@@ -19,7 +19,12 @@ experiments and/or analyzes.
 ## Robot Weight
 The weight of the robot was one of our initial concerns, and we consequently used lighter materials in the construction of the robot. We still used the aluminum extrusions for our base frame, but instead of using wood or metal for our second level, we used an acrylic sheet that would allow us to easily mount everything we needed. We also used a 3-D printer to print any extra additions we needed, including a mount for the PiCamera (which will be used in future projects), a base for the Lidar and RPi (using the same design as the one from last semester), and small platforms that allow us to lower our caster wheels to the same height as the skateboard wheels. In the end, the robot ended up having a mass of 5.2 kilograms (or 11.47 pounds).
 
-## Base Dimensions (include the add-ons).
+## Base Dimensions
+When considering the design for our robot, we were thinking ahead to the end goal and how we planned to use it when mapping out the CCCS building. To accomplish this, we decided to make the base of our robot a perfect square (or as close to one as we could make by cutting an acrylic sheet) with dimensions of 0.37 meters by 0.375 meters. This also allowed us to have more than enough space to mount all of our components. Lastly, we used the robot chassis design from last semester to create two layers, allowing us to mount our Lidar on top of the bot for future navigation projects. Overall, this addition made the height of the robot 0.22 meters.
+
+## Wiring Diagram
+[Circuit Diagram - Robotics II (1).pdf](https://github.com/spodsiadlik/The-Three-Amigos/files/10805536/Circuit.Diagram.-.Robotics.II.1.pdf)
+
 
 ## Maximum Speed
 When determining the speed our robot, we used different methods for finding the linear and angular velocities of the robot. To determine the linear velocity, we set up markers at every meter along the floor for four meters. Then, we drove our robot forward at its maximum speed and used a stopwatch (with a lap feature) to find how long it took to reach marker. Then, we averaged each lap value to determine the overall speed of the bot, and we determined that it took around 2 seconds to reach each marker. Therefore, it had a linear speed of 0.5 m/s.
