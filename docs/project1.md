@@ -1,10 +1,3 @@
-(2%) An overview section to introduce your robot with the most highlighted functions and
-features
-
-(15%) A specification section to describe all the detailed features, including those listed in 2
-Analyzed Features. You may want to attach the hardware configuration (all the dimensions
-including screw holes), part list and wiring diagram here.
-
 (15%) An experiment(analyzes) section to describe the methods of how you evaluate the
 interested but not straightforward features and facts. Please reveal the results of your
 experiments and/or analyzes.
@@ -12,7 +5,7 @@ experiments and/or analyzes.
 (3%) A summary and discussion section to close up the report and share any interesting findings.
 
 # Overview
-Our robot utilizes the Raspberry Pi, high-torque motors, two power sources, a motor driver board, an alumimum frame, skateboard wheels, caster wheels, nuts and bolts, wiring, rplider, and the pi camera all working seemlessly together to create a functioning robot. It is integrated with ROS and uses the teleop_twist_key package for remote control capabilities from any computer. 
+In this project, we strove to create a differential drive robot that could be controlled using ROS. It uses a Raspberry Pi in conjunction with high-torque motors, a motor driver board, and many other parts, which created a driving robot. Then, after considering features like the robot's weight and shape, we were able to optimize our bot for future assignments and could eventually use it to drive through the CCCS building. Lastly, we integrated ROS into our robot and used the teleop_twist_key package to remotely control it from a computer. 
 
 # Analysis
 
@@ -22,6 +15,7 @@ The weight of the robot was one of our initial concerns, and we consequently use
 ## Base Dimensions
 When considering the design for our robot, we were thinking ahead to the end goal and how we planned to use it when mapping out the CCCS building. To accomplish this, we decided to make the base of our robot a perfect square (or as close to one as we could make by cutting an acrylic sheet) with dimensions of 0.37 meters by 0.375 meters. This also allowed us to have more than enough space to mount all of our components. Lastly, we used the robot chassis design from last semester to create two layers, allowing us to mount our Lidar on top of the bot for future navigation projects. Overall, this addition made the height of the robot 0.22 meters.
 
+![Acylic Sheet Blueprint](https://user-images.githubusercontent.com/112110593/220822932-0a08f132-286d-454d-8571-26bcb6e1f94d.JPG)
 ![Aluminum Extrusion Frame](https://user-images.githubusercontent.com/112110593/220675392-b7bee21e-1ffa-4ef2-9d62-bb76b9cf2d10.JPG)
 
 
