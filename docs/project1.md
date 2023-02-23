@@ -61,9 +61,10 @@ We also include two different software features to terminate the program. The fi
 | Pi Camera | Used to Guide the Robot and Analyze Surroundings | 1 |
 
 # Evaluation
+
 ## Future Additions
+As we designed our robot, we made sure that we left space for future additions that would be used in other projects. These additions included a Lidar for navigation, a Pi Camera, and a Raspberry Pi Pico that serves as an encoder. Additionally, we found and 3D-printed an adjustable mount for the Pi Camera, and a
 Leaving space for future additions (Lidar, PiCamera, Pico)
-If we were ti di this again, we would further notate the types of screws used (specifically the thread count per inch).
 
 ## Issues with Caster Wheels
 Problems with Caster Wheels
