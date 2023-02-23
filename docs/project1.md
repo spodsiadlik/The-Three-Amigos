@@ -66,13 +66,15 @@ ROS was installed on every teammate's personal computer and the Raspberry Pi. Al
 # Evaluation
 Leaving space for future additions (Lidar, PiCamera, Pico)
 
+Problems with Caster Wheels
 Lifts for the caster wheels
-
 The wheel has a radius of 8.4 cm.
+The robot behaves as expected. Everything functions properly from multiple tests that have been conducted. We did find that our robot didn't get great traction on uneven surfaces. The caster wheel pad size was reduced to give the motor wheels more traction. That seemed to help. 
 
 Twist listener
 PhaseEnableRobot class
 ROS Workspace
+ROS was installed on every teammate's personal computer and the Raspberry Pi. All needed libaries were acquired and installed. The teleop_twist_key package was installed on all devices. A shared github repository was created. A local package was created for use with the robot. A listener template was used from github to listen for input from the cmd_vel topic from the teleop_twist_key package. Teleop_twist_key can be run on any device and communicate with any other device with the same ROS domain. Teleop_twist_key allows input from the keyboard to change the values for the variables representing those keys. The values for those variables are used within the code to have the robot perform different actions. Only values for linear and angular velocity are used. The table below details the actions performed based off the variable value. 
 
 | Function | Linear Velocity (x) | Angular Velocity (z) |
 | --- | --- | --- |
@@ -87,4 +89,3 @@ ROS Workspace
 | STOP | Zero | Zero |
 
 # Summary
-The robot behaves as expected. Everything functions properly from multiple tests that have been conducted. We did find that our robot didn't get great traction on uneven surfaces. The caster wheel pad size was reduced to give the motor wheels more traction. That seemed to help. 
