@@ -42,9 +42,6 @@ One of the most important considerations that we had while designing our robot w
 stripping that could reduce damamge if the bot bumped into anything. It was placed strategically on the edges of the bot in order to maximize its efficiency. Additionally, we used tape to fasten our cables and ensure that they do not move around while the bot is in motion.
 We also include two different software features to terminate the program. The first is the KeyboardInterrupt, which occurs when the CTRL and C keys are pressed at the same time, ending the program. The other option is used when the K is pressed while the driving program is running, and it reduced the angular and linear velocity to zero.
 
-## Programming
-ROS was installed on every teammate's personal computer and the Raspberry Pi. All needed libaries were acquired and installed. The teleop_twist_key package was installed on all devices. A shared github repository was created. A local package was created for use with the robot. A listener template was used from github to listen for input from the cmd_vel topic from the teleop_twist_key package. Teleop_twist_key can be run on any device and communicate with any other device with the same ROS domain. Teleop_twist_key allows input from the keyboard to change the values for the variables representing those keys. The values for those variables are used within the code to have the robot perform different actions. Only values for linear and angular velocity are used. The table under the evaluation section details the action performed based off the variable value. 
-
 ## Parts List
 
 | Name | Description | Quantity |
@@ -74,6 +71,7 @@ The robot behaves as expected. Everything functions properly from multiple tests
 Twist listener
 PhaseEnableRobot class
 ROS Workspace
+
 ROS was installed on every teammate's personal computer and the Raspberry Pi. All needed libaries were acquired and installed. The teleop_twist_key package was installed on all devices. A shared github repository was created. A local package was created for use with the robot. A listener template was used from github to listen for input from the cmd_vel topic from the teleop_twist_key package. Teleop_twist_key can be run on any device and communicate with any other device with the same ROS domain. Teleop_twist_key allows input from the keyboard to change the values for the variables representing those keys. The values for those variables are used within the code to have the robot perform different actions. Only values for linear and angular velocity are used. The table below details the actions performed based off the variable value. 
 
 | Function | Linear Velocity (x) | Angular Velocity (z) |
