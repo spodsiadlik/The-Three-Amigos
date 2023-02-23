@@ -67,7 +67,7 @@ ROS was installed on every teammate's personal computer and the Raspberry Pi. Al
 Leaving space for future additions (Lidar, PiCamera, Pico)
 
 Problems with Caster Wheels
-Lifts for the caster wheels
+Lifts for the caster wheels - USED FREECAD
 The wheel has a radius of 8.4 cm.
 The robot behaves as expected. Everything functions properly from multiple tests that have been conducted. We did find that our robot didn't get great traction on uneven surfaces. The caster wheel pad size was reduced to give the motor wheels more traction. That seemed to help. 
 
