@@ -61,13 +61,17 @@ We also include two different software features to terminate the program. The fi
 | Pi Camera | Used to Guide the Robot and Analyze Surroundings | 1 |
 
 # Evaluation
+## Future Additions
 Leaving space for future additions (Lidar, PiCamera, Pico)
 
+## Issues with Caster Wheels
 Problems with Caster Wheels
 Lifts for the caster wheels - USED FREECAD
+5.5
 The wheel has a radius of 8.4 cm.
 The robot behaves as expected. Everything functions properly from multiple tests that have been conducted. We did find that our robot didn't get great traction on uneven surfaces. The caster wheel pad size was reduced to give the motor wheels more traction. That seemed to help. 
 
+## Using ROS 
 Twist listener
 PhaseEnableRobot class
 ROS Workspace
