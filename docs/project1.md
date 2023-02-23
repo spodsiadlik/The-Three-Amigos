@@ -63,22 +63,17 @@ We also include two different software features to terminate the program. The fi
 # Evaluation
 
 ## Future Additions
-As we designed our robot, we made sure that we left space for future additions that would be used in other projects. These additions included a Lidar for navigation, a Pi Camera, and a Raspberry Pi Pico that serves as an encoder. Additionally, we found and 3D-printed an adjustable mount for the Pi Camera, and a
-Leaving space for future additions (Lidar, PiCamera, Pico)
+As we designed our robot, we made sure that we left space for future additions that would be used in other projects. These additions included a Lidar for navigation, a Pi Camera, and a Raspberry Pi Pico that checks the rotary encoders in the motor. Additionally, we found and 3D-printed an adjustable mount for the Pi Camera, and also created a reel to hold the long ribbon cable. This will ensure that all of our components are easily accessible in the future and have a place to be effectively mounted.
 
 ## Issues with Caster Wheels
-Problems with Caster Wheels
-Lifts for the caster wheels - USED FREECAD
-5.5 mm
-The wheel has a radius of 8.4 cm.
-The robot behaves as expected. Everything functions properly from multiple tests that have been conducted. We did find that our robot didn't get great traction on uneven surfaces. The caster wheel pad size was reduced to give the motor wheels more traction. That seemed to help. 
+Throughout the design process, the most common recurring issues have all been with the caster wheels. Initially, they were too high off the ground and caused the robot to not be level, so we used FreeCAD to create multiple platforms ranging from 5.5 to 6.4 millimeters. Eventually, we found that the 5.5 mm platforms were most effective and allowed the wheel the to have more traction.
 
 ## Using ROS 
 Twist listener
 PhaseEnableRobot class
 ROS Workspace
-
-ROS was installed on every teammate's personal computer and the Raspberry Pi. All needed libaries were acquired and installed. The teleop_twist_key package was installed on all devices. A shared github repository was created. A local package was created for use with the robot. A listener template was used from github to listen for input from the cmd_vel topic from the teleop_twist_key package. Teleop_twist_key can be run on any device and communicate with any other device with the same ROS domain. Teleop_twist_key allows input from the keyboard to change the values for the variables representing those keys. The values for those variables are used within the code to have the robot perform different actions. Only values for linear and angular velocity are used. The table below details the actions performed based off the variable value. 
+To run our robot, we needed to use ROS Humble, so we installed it on every teammate's personal laptop and the Raspberry Pi. Next, we acquired all of the needed libraries and installed the telep_twist_key package. After that, we created a shared GitHub repository for the group. A local package was created for use with the robot, and a listener template was used from GitHub to listen for input from the cmd_vel topic from the teleop_twist_key package. 
+Teleop_twist_key allows input from the keyboard to change the values for the variables representing those keys, and it communicates the data with any other device with the same ROS domain.Therefore, we set the values for those variables within our code to have the robot perform different actions. Only values for linear and angular velocity are used; the table below details the actions performed based off those values. 
 
 | Function | Linear Velocity (x) | Angular Velocity (z) |
 | --- | --- | --- |
