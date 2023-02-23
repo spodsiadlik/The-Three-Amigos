@@ -79,4 +79,6 @@ To run our robot, we needed to use ROS Humble, so we installed it on every teamm
 
 # Summary
 Overall, the experience of designing and running the robot has been enjoyable, and we have learned many things throughout the process.
+
+Here is a final video of "The Fourth Amigo" running! https://youtu.be/zgJtEFMvBP0
 (3%) A summary and discussion section to close up the report and share any interesting findings.
