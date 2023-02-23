@@ -24,17 +24,14 @@ Next, we wanted to find the angular velocity, so we had the robot rotate in a ci
 ## Payload Capacity
 To test the payload capacity, we added 2kg masses one by one onto our robot while it was running until the robot stopped working. However, after adding 6 of those masses, the robot was still functioning extremely well and we were risking destroying our acrylic sheet. Therefore, we stopped at that weight because we did not feel that it was worth risking our robot's functionality to add more weight. Overall, we determined that the payload capacity of our robot was at least 12 kilograms (or 26.46 pounds).
 
-## Battery (minimum) life span
-When constructing the robot, we considered the battery life and decided to have two separate power supplies: one to power the motors and one to power the Raspberry Pi and the RPi Pico. Then, the batteries wouldn't be simultaneously drained by both components, and we could individually power each part. The first type of power supply uses three lithium ion batteries to power our motors, and we chose this specific method because the batteries were easily removable. Because of that, we wouldn't need to disassemble anything to recharge the batteries, and they would be much less dangerous that LiPo batteries. Our other power source would be an Anker Power Bank, which we could use to power the Pi and Pico. It would last much longer than the batteries, so it would need to be recharged less.
+## Battery Life Span
+When constructing the robot, we considered the battery life and decided to have two separate power supplies: one to power the motors and one to power the Raspberry Pi and the RPi Pico. Then, the batteries wouldn't be simultaneously drained by both components, and we could individually power each part. The first type of power supply uses three lithium ion batteries to power our motors, and we chose this specific method because the batteries were easily removable. Because of that, we wouldn't need to disassemble anything to recharge the batteries, and they would be much less dangerous that LiPo batteries. Our other power source would be an Anker Power Bank, which we could use to power the Pi and Pico. Since it would last much longer than the batteries, so it would need to be recharged less. The power bank has a few days worth of power, wheres the batteries for the motors can last for about ..... until dropping below 9V and not longer working effectively.
 
-Finding capacity of Lithium Ion batteries, then determine how much power is used by the motors
-OR Filluy charge the batteries and manually discharge them to 9V.
 
 
 ## Safety Features
 One of the most important considerations that we had while designing our robot was involving safety features, since we want to make sure that our bot is safe to use. We considered two different types of safety additions: physical and software features. The main physical safety feature that we included was bumpers made of weather 
-stripping that could reduce damamge if the bot bumped into anything. It was placed strategically on the edges of the bot in order to maximize its efficiency. Additionally, we used tape to fasten our cables and ensure that they do not move around while the bot is in motion.
-We also include two different software features to terminate the program. The first is the KeyboardInterrupt, which occurs when the CTRL and C keys are pressed at the same time, ending the program. The other option is used when the K is pressed while the driving program is running, and it reduced the angular and linear velocity to zero.
+stripping that could reduce damamge if the bot bumped into anything. It was placed strategically on the edges of the bot in order to maximize its efficiency. Additionally, we used tape to fasten our cables and ensure that they do not move around while the bot is in motion. We also include two different software features to terminate the program. The first is the KeyboardInterrupt, which occurs when the CTRL and C keys are pressed at the same time, ending the program. The other option is used when the K key is pressed while the driving program is running, and it reduced the angular and linear velocity to zero.
 
 ## Parts List
 
@@ -50,7 +47,8 @@ We also include two different software features to terminate the program. The fi
 | Skateboard Wheels | Used to Steer the Bot | 2 |
 | Caster Wheels | Used to Stabilize of the Bot and Guide its Motion | 2 |
 | Acrylic Sheet | Used as a Base to Attach Components | 1 |
-| Nuts and Bolts | Used to Attach Parts to the Bot | ~ |
+| Nuts and Bolts | Used to Attach Parts to the Bot | 8 |
+| Screws | Various Sized Screws Used to Attach Parts | 11 |
 | RPLIDAR | Used to Guide the Robot and Judge Distances from Obstacles | 1 |
 | Pi Camera | Used to Guide the Robot and Analyze Surroundings | 1 |
 
@@ -78,7 +76,6 @@ To run our robot, we needed to use ROS Humble, so we installed it on every teamm
 | STOP | Zero | Zero |
 
 # Summary
-Overall, the experience of designing and running the robot has been enjoyable, and we have learned many things throughout the process.
+Overall, the experience of designing and running the robot has been enjoyable, and we have learned many things throughout the process. The primary knowledge that we gained was regarding ROS, as we learned all of the basics through multiple tutorials. Then, we were able to apply that knowledge using the teleop_twist_key package and drive the robot. We also gained more insight into the design process and found how various complications could come up. However, by using our problem-solving skills, we were able to find solutions including using using FreeCAD to print platforms and adding weather stripping to create protective bumpers. Lastly, we found how effectively planning and considering many features could result in a working project!
 
 Here is a final video of "The Fourth Amigo" running! https://youtu.be/zgJtEFMvBP0
-(3%) A summary and discussion section to close up the report and share any interesting findings.
