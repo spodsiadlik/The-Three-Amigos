@@ -12,7 +12,7 @@ experiments and/or analyzes.
 (3%) A summary and discussion section to close up the report and share any interesting findings.
 
 # Overview
-
+Our robot utilizes the Raspberry Pi, high-torque motors, two power sources, a motor driver board, an alumimum frame, skateboard wheels, caster wheels, nuts and bolts, wiring, rplider, and the pi camera all working seemlessly together to create a functioning robot. It is integrated with ROS and uses the teleop_twist_key package for remote control capabilities from any computer. 
 
 # Analysis
 
@@ -90,3 +90,4 @@ ROS Workspace
 | STOP | Zero | Zero |
 
 # Summary
+The robot behaves as expected. Everything functions properly from multiple tests that have been conducted. We did find that our robot didn't get great traction on uneven surfaces. The caster wheel pad size was reduced to give the motor wheels more traction. That seemed to help. 
