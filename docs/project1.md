@@ -76,4 +76,4 @@ To run our robot, we needed to use ROS Humble, so we installed it on every teamm
 # Summary
 Overall, the experience of designing and running the robot has been enjoyable, and we have learned many things throughout the process. The primary knowledge that we gained was regarding ROS, as we learned all of the basics through multiple tutorials. Then, we were able to apply that knowledge using the teleop_twist_key package and drive the robot. We also gained more insight into the design process and found how various complications could come up. However, by using our problem-solving skills, we were able to find solutions including using using FreeCAD to print platforms and adding weather stripping to create protective bumpers. Lastly, we found how effectively planning and considering many features could result in a working project!
 
-Here is a final video of "The Fourth Amigo" running! https://youtu.be/zgJtEFMvBP0
+Here is a final video of "The Fourth Amigo" running! https://youtube.com/shorts/EfjXouigjik?feature=share
