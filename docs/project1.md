@@ -1,6 +1,18 @@
 # Overview
 In this project, we strove to create a differential drive robot that could be controlled using ROS. It uses a Raspberry Pi in conjunction with high-torque motors, a motor driver board, and many other parts, which created a driving robot. Then, after considering features like the robot's weight and shape, we were able to optimize our bot for future assignments and could eventually use it to drive through the CCCS building. Lastly, we integrated ROS into our robot and used the teleop_twist_key package to remotely control it from a computer. 
 
+
+| Property | Quantity |
+| --- | --- |
+| Weight | 5.2 kg (11.47 lbs) |
+| Height | 0.22 m |
+| Dimension (Length x Width) | 0.37 m x 0.371 m |
+| Battery Life (Motors) | 2.5 hours |
+| Battery Life (Pi) | Multiple Days |
+| Maximum Speed (Linear) | 0.5 m/s |
+| Maximum Speed (Radial) | 0.85π rad/s |
+| Payload Capacity | At Least 12 kg (26.5 lbs) |
+
 # Analysis
 
 ## Robot Weight
@@ -18,7 +30,7 @@ When considering the design for our robot, we were thinking ahead to the end goa
 
 
 ## Maximum Speed
-When determining the speed our robot, we used different methods for finding the linear and angular velocities of the robot. To determine the linear velocity, we set up markers at every meter along the floor for four meters. Then, we drove our robot forward at its maximum speed and used a stopwatch (with a lap feature) to find how long it took to reach marker. Then, we averaged each lap value to determine the overall speed of the bot, and we determined that it took around 2 seconds to reach each marker. Therefore, it had a linear speed of 0.5 m/s.
+When determining the speed our robot, we used different methods for finding the linear and angular velocities of the robot. To determine the linear velocity, we set up markers at every meter along the floor for four meters. Then, we drove our robot forward at its maximum speed and used a stopwatch (with a lap feature) to find how long it took to reach marker. Then, we averaged each lap value to determine the overall speed of the bot, and we determined that it took around 2 seconds to reach each marker. Therefore, it had a maximum linear speed of 0.5 m/s.
 Next, we wanted to find the angular velocity, so we had the robot rotate in a circle for 2 rotations and determined how long it took to accomplish that task. In the end, it to 4.7 seconds to rotate twice, so it has an angular velocity of 0.85pi radians/s.
 
 ## Payload Capacity
