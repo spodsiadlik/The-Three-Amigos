@@ -8,7 +8,7 @@ In this project, we strove to create a differential drive robot that could be co
 | Height | 0.22 m |
 | Dimension (Length x Width) | 0.37 m x 0.371 m |
 | Battery Life (Motors) | 2.5 hours |
-| Battery Life (Pi) | Multiple Days |
+| Battery Life (Raspberry Pi) | Multiple Days |
 | Maximum Speed (Linear) | 0.5 m/s |
 | Maximum Speed (Radial) | 0.85π rad/s |
 | Payload Capacity | At Least 12 kg (26.5 lbs) |
