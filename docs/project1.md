@@ -12,6 +12,8 @@ In this project, we strove to create a differential drive robot that could be co
 | Maximum Speed (Linear) | 0.5 m/s |
 | Maximum Speed (Radial) | 0.85π rad/s |
 | Payload Capacity | At Least 12 kg (26.5 lbs) |
+| Wheel Radius (Skateboard) | 4.15 cm |
+| Wheel Radius (Caster) | 4.15 cm |
 
 # Analysis
 
@@ -71,7 +73,7 @@ As we designed our robot, we made sure that we left space for future additions t
 Throughout the design process, the most common recurring issues have all been with the caster wheels. Initially, they were too high off the ground and caused the robot to not be level, so we used FreeCAD to create multiple platforms ranging from 5.5 to 6.4 millimeters. Eventually, we found that the 5.5 mm platforms were most effective and allowed the wheel to have more traction on a wide variety of terrains.
 
 ## Using ROS 
-To run our robot, we needed to use ROS Humble, so we installed it on every teammate's personal laptop and the Raspberry Pi. Next, we acquired all of the needed libraries and installed the telep_twist_key package. After that, we created a shared GitHub repository for the group. A local package was created for use with the robot, and a listener template was used from GitHub to listen for input from the cmd_vel topic from the teleop_twist_key package. Teleop_twist_key allows input from the keyboard to change the values for the variables representing those keys, and it communicates the data with any other device with the same ROS domain.Therefore, we set the values for those variables within our code to have the robot perform different actions. Only values for linear and angular velocity are used; the table below details the actions performed based off those values. One final important thing to note is that we used the PhaseEnableRobot class (in the gpiozero library) to control each of the motors in our program.
+To run our robot, we needed to use ROS Humble, so we installed it on every teammate's personal laptop and the Raspberry Pi. Next, we acquired all of the needed libraries and installed the telep_twist_key package. After that, we created a shared GitHub repository for the group. A local package was created for use with the robot, and a listener template was used from GitHub to listen for input from the cmd_vel topic from the teleop_twist_key package. Teleop_twist_key allows input from the keyboard to change the values for the variables representing those keys, and it communicates the data with any other device with the same ROS domain. Therefore, we set the values for those variables within our code to have the robot perform different actions. Only values for linear and angular velocity are used; the table below details the actions performed based off those values. One final important thing to note is that we used the PhaseEnableRobot class (in the gpiozero library) to control each of the motors in our program.
 
 | Function | Linear Velocity (x) | Angular Velocity (z) |
 | --- | --- | --- |
