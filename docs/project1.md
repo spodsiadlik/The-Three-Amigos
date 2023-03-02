@@ -13,7 +13,7 @@ In this project, we strove to create a differential drive robot that could be co
 | Maximum Speed (Radial) | 0.85π rad/s |
 | Payload Capacity | At Least 12 kg (26.5 lbs) |
 | Wheel Radius (Skateboard) | 4.15 cm |
-| Wheel Radius (Caster) | 4.15 cm |
+| Wheel Radius (Caster) | 2.35 cm |
 
 # Analysis
 
