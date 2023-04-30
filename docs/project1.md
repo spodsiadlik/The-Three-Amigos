@@ -87,6 +87,8 @@ To run our robot, we needed to use ROS Humble, so we installed it on every teamm
 | backward_right | Negative | Positive |
 | STOP | Zero | Zero |
 
+With the previous packages configured, we had the basic driving functionality needed to begin working on autonomous navigation using the Nav2 packages and the SLAM toolbox for Ros 2. Rviz was used to visualize lidar scans being processed by the slamtec RPLidar on the top of the robot. These readings allowed for a Gazebo world which matched the environment that the lidar detected to be created. The Nav2 package provides a waypoint navigation system that can be used to navigate between points in the lidar map. A raspberry pi pico was used to read the actual rotation rate of each motor on our robot to publish a bot_odom topic which detailed the real position of our robot in the world. With these functionalities, the bot can autonomously navigate between two points in a pre-mapped area.
+
 # Summary
 Overall, the experience of designing and running the robot has been enjoyable, and we have learned many things throughout the process. The primary knowledge that we gained was regarding ROS, as we learned all of the basics through multiple tutorials. Then, we were able to apply that knowledge using the teleop_twist_key package and drive the robot. We also gained more insight into the design process and found how various complications could come up. However, by using our problem-solving skills, we were able to find solutions including using using FreeCAD to print platforms and adding weather stripping to create protective bumpers. Lastly, we found how effectively planning and considering many features could result in a working project!
 
