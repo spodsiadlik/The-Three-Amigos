@@ -1,5 +1,5 @@
 # Overview
-In this project, we strove to create a differential drive robot that could be controlled using ROS. It uses a Raspberry Pi in conjunction with high-torque motors, a motor driver board, and many other parts, which created a driving robot. Then, after considering features like the robot's weight and shape, we were able to optimize our bot for future assignments and could eventually use it to drive through the CCCS building. Lastly, we integrated ROS into our robot and used the teleop_twist_key package to remotely control it from a computer. 
+In this project, we strove to create a differential drive robot that could be controlled using ROS. It uses a Raspberry Pi in conjunction with high-torque motors, a motor driver board, and many other parts, which created a driving robot. Then, after considering features like the robot's weight and shape, we were able to optimize our bot for future assignments and could eventually use it to drive through the CCCS building. This basic robot was itterated upon with lidar, which enables us to autonomously navigate through a pre-mapped area using the ROS 2 navigation stack.
 
 
 | Property | Quantity |
