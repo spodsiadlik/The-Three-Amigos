@@ -5,8 +5,7 @@ In this project, we strove to create a differential drive robot that could be co
 | Property | Quantity |
 | --- | --- |
 | Weight | 5.2 kg (11.47 lbs) |
-| Height | 0.22 m |
-| Dimension (Length x Width) | 0.37 m x 0.371 m |
+| Dimension (Length x Width x Height) | 0.37 m x 0.371 m x 0.22 m |
 | Battery Life (Motors) | 2.5 hours |
 | Battery Life (Raspberry Pi) | Multiple Days |
 | Maximum Speed (Linear) | 0.5 m/s |
@@ -14,6 +13,8 @@ In this project, we strove to create a differential drive robot that could be co
 | Payload Capacity | At Least 12 kg (26.5 lbs) |
 | Wheel Radius (Skateboard) | 4.15 cm |
 | Wheel Radius (Caster) | 2.35 cm |
+| Wheel Separation | | 
+| Ground Clearance | |
 
 # Analysis
 
