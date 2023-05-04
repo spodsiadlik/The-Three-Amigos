@@ -1,5 +1,5 @@
 # Overview
-In this project, we strove to create a differential drive robot that could be controlled using ROS 2 Humble. It uses a Raspberry Pi in conjunction with high-torque motors, a motor driver board, and many other parts, which created a driving robot. Then, after considering features like the robot's weight and shape, we were able to optimize our bot for future assignments and could eventually use it to drive through a section of Lewis Science Center. This basic robot was iterated upon with LiDAR, which enables us to autonomously navigate through a pre-mapped area using the ROS 2 navigation stack.
+In this project, we strove to create a differential drive robot that could be controlled using ROS 2 Humble. It uses a Raspberry Pi in conjunction with high-torque motors, a motor driver board, and many other parts, which created a driving robot. Then, after considering features like the robot's weight and shape, we were able to optimize our bot ans use it to drive through a section of Lewis Science Center. This basic robot was iterated upon with LiDAR, which enables us to autonomously navigate through a pre-mapped area using the ROS 2 navigation stack.
 
 
 | Property | Quantity |
@@ -23,7 +23,8 @@ In this project, we strove to create a differential drive robot that could be co
 
 
 ## Wiring Diagram
-![Circuit Diagram - Fourth Amigo](https://user-images.githubusercontent.com/112110593/220675232-cb4112af-a8b4-48c7-9ff0-9cb7bf532950.JPG)
+![Circuit Diagram - The Fourth Amigo!](https://user-images.githubusercontent.com/112110593/236289331-069d5b4a-5f97-4bb7-b7c2-06ae90fd74ef.JPG)
+
 
 # Design Analysis
 
