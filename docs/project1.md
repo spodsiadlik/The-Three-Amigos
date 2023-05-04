@@ -96,7 +96,7 @@ With the previous packages configured, we had the basic driving functionality ne
 ## Workflow of Navigation
 
 ## Factors Affecting Mapping and Navigation
-As we were mapping out the hallway for future navigation, we ran into two main problems that were causing substantial error in the map. The first of these problems involved tire slipping due to low traction, which we remedied by removing the aluminum extrusion fram and adding two extra 2kg masses on top of the bot. This resulted in improved grip between the robot and the ground. The other main problem that we ran into was directional drift, which was caused by the slight unevenness of the wheels. To fix this, we used low driving speeds for the robot while mapping (about 6% speed) and gently nudged the robot along a straight path when it would begin to veer off course.
+As we were mapping out the hallway for future navigation, we ran into two main problems that were causing substantial error in the map. The first of these problems involved tire slipping due to low traction, which we remedied by removing the aluminum extrusion fram and adding two extra 2kg masses on top of the bot. This resulted in improved grip between the robot and the ground. The other main problem that we ran into was directional drift, which was caused by the slight unevenness of the wheels. To fix this, we used low driving speeds for the robot while mapping (about 16% speed) and gently nudged the robot along a straight path when it would begin to veer off course.
 
 The next problem came when saving the map.
 
