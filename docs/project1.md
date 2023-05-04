@@ -99,6 +99,7 @@ With the previous packages configured, we had the basic driving functionality ne
 As we were mapping out the hallway for future navigation, we ran into two main problems that were causing substantial error in the map. The first of these problems involved tire slipping due to low traction, which we remedied by removing the aluminum extrusion fram and adding two extra 2kg masses on top of the bot. This resulted in improved grip between the robot and the ground. The other main problem that we ran into was directional drift, which was caused by the slight unevenness of the wheels. To fix this, we used low driving speeds for the robot while mapping (about 16% speed) and gently nudged the robot along a straight path when it would begin to veer off course.
 
 The next problem came when saving the map.
+The SlamToolboxPlugin for RVIZ2 was having issues with serializing the map data, so we had to save using the Ros2 map server instead. This gave us maps in different formats than what we needed for the Nav2 plugin, so we ended up having to troubleshoot the plugin itself. Reinstalling fixed the issue. We also had issues with people walking past the robot during the mapping process, which created "ghost walls" in the map. We ended up taking several maps and using the best one for navigation.
 
 Navigation - 
 Empty strings
