@@ -88,6 +88,7 @@ To run our robot, we needed to use ROS Humble, so we installed it on every teamm
 | backward_right | Negative | Positive |
 | STOP | Zero | Zero |
 
+## Adding autonomous driving
 With the previous packages configured, we had the basic driving functionality needed to begin working on autonomous navigation using the Nav2 packages and the SLAM toolbox for Ros 2. Rviz was used to visualize lidar scans being processed by the slamtec RPLidar on the top of the robot. These readings allowed for an Rviz map which matched the environment that the lidar detected to be created. The Nav2 package provides a waypoint navigation system that can be used to navigate between points in the lidar map. A raspberry pi pico was used to read the actual rotation rate of each motor on our robot to publish a bot_odom topic which detailed the real position of our robot in the world. With these functionalities, the bot can autonomously navigate between two points in a pre-mapped area.
 
 # Summary
