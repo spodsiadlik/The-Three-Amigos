@@ -26,6 +26,8 @@ When considering the design for our robot, we were thinking ahead to the end goa
 
 ![Acylic Sheet Blueprint](https://user-images.githubusercontent.com/112110593/220822932-0a08f132-286d-454d-8571-26bcb6e1f94d.JPG)
 ![Aluminum Extrusion Frame](https://user-images.githubusercontent.com/112110593/220675392-b7bee21e-1ffa-4ef2-9d62-bb76b9cf2d10.JPG)
+![Side View - Robotics](https://user-images.githubusercontent.com/112110593/236246026-7b84e9dc-8f58-4fc0-ae7e-13c53edf4f3d.JPG)
+![Electronics Layout - Robotics](https://user-images.githubusercontent.com/112110593/236246197-40934f7c-390a-489b-8daa-984fd2f39e86.JPG)
 
 
 ## Wiring Diagram
@@ -91,7 +93,12 @@ To run our robot, we needed to use ROS Humble, so we installed it on every teamm
 ## Adding autonomous driving
 With the previous packages configured, we had the basic driving functionality needed to begin working on autonomous navigation using the Nav2 packages and the SLAM toolbox for Ros 2. Rviz was used to visualize lidar scans being processed by the slamtec RPLidar on the top of the robot. These readings allowed for an Rviz map which matched the environment that the lidar detected to be created. The Nav2 package provides a waypoint navigation system that can be used to navigate between points in the lidar map. A raspberry pi pico was used to read the actual rotation rate of each motor on our robot to publish a bot_odom topic which detailed the real position of our robot in the world. With these functionalities, the bot can autonomously navigate between two points in a pre-mapped area.
 
-# Summary
+## Workflow of Navigation
+
+## Factors Affecting Navigation
+
+## Summary
 Overall, the experience of designing and running the robot has been enjoyable, and we have learned many things throughout the process. The primary knowledge that we gained was regarding ROS, as we learned all of the basics through multiple tutorials. Then, we were able to apply that knowledge using the teleop_twist_key package and drive the robot. We also gained more insight into the design process and found how various complications could come up. However, by using our problem-solving skills, we were able to find solutions including using using FreeCAD to print platforms and adding weather stripping to create protective bumpers. Lastly, we found how effectively planning and considering many features could result in a working project!
 
-Here is a final video of "The Fourth Amigo" running! https://youtube.com/shorts/EfjXouigjik?feature=share
+Here is an early video of "The Fourth Amigo" running! https://youtube.com/shorts/EfjXouigjik?feature=share
+Here is the final video of "The Fourth Amigo" navigating through the hallway! https://youtu.be/RlqvqN4nuBk
