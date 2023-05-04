@@ -1,5 +1,5 @@
 # Overview
-In this project, we strove to create a differential drive robot that could be controlled using ROS. It uses a Raspberry Pi in conjunction with high-torque motors, a motor driver board, and many other parts, which created a driving robot. Then, after considering features like the robot's weight and shape, we were able to optimize our bot for future assignments and could eventually use it to drive through the CCCS building. This basic robot was itterated upon with lidar, which enables us to autonomously navigate through a pre-mapped area using the ROS 2 navigation stack.
+In this project, we strove to create a differential drive robot that could be controlled using ROS 2 Humble. It uses a Raspberry Pi in conjunction with high-torque motors, a motor driver board, and many other parts, which created a driving robot. Then, after considering features like the robot's weight and shape, we were able to optimize our bot for future assignments and could eventually use it to drive through a section of Lewis Science Center. This basic robot was iterated upon with LiDAR, which enables us to autonomously navigate through a pre-mapped area using the ROS 2 navigation stack.
 
 
 | Property | Quantity |
@@ -14,7 +14,7 @@ In this project, we strove to create a differential drive robot that could be co
 | Wheel Radius (Skateboard) | 4.15 cm |
 | Wheel Radius (Caster) | 2.35 cm |
 | Wheel Separation | 5.5 cm |
-| Ground Clearance | 5.4 cm |
+| Ground Clearance | 7.26 cm |
 
 # Analysis
 
@@ -90,24 +90,20 @@ To run our robot, we needed to use ROS Humble, so we installed it on every teamm
 | backward_right | Negative | Positive |
 | STOP | Zero | Zero |
 
-## Adding autonomous driving
+## Workflow of Navigation
 With the previous packages configured, we had the basic driving functionality needed to begin working on autonomous navigation using the Nav2 packages and the SLAM toolbox for Ros 2. Rviz was used to visualize lidar scans being processed by the slamtec RPLidar on the top of the robot. These readings allowed for an Rviz map which matched the environment that the lidar detected to be created. The Nav2 package provides a waypoint navigation system that can be used to navigate between points in the lidar map. A raspberry pi pico was used to read the actual rotation rate of each motor on our robot to publish a bot_odom topic which detailed the real position of our robot in the world. With these functionalities, the bot can autonomously navigate between two points in a pre-mapped area.
 
-## Workflow of Navigation
-
 ## Factors Affecting Mapping and Navigation
-As we were mapping out the hallway for future navigation, we ran into two main problems that were causing substantial error in the map. The first of these problems involved tire slipping due to low traction, which we remedied by removing the aluminum extrusion fram and adding two extra 2kg masses on top of the bot. This resulted in improved grip between the robot and the ground. The other main problem that we ran into was directional drift, which was caused by the slight unevenness of the wheels. To fix this, we used low driving speeds for the robot while mapping (about 16% speed) and gently nudged the robot along a straight path when it would begin to veer off course.
+As we were mapping out the hallway for future navigation, we ran into two main problems that were causing substantial error in the map. The first of these problems involved tire slipping due to low traction, which we remedied by removing the aluminum extrusion frame and adding two extra 1kg masses on top of the bot. This resulted in improved grip between the robot and the ground. The other main problem that we ran into was directional drift, which was caused by the slight unevenness of the wheels. To fix this, we used low driving speeds for the robot while mapping (about 16% speed) and gently nudged the robot along a straight path when it would begin to veer off course.
 
-The next problem came when saving the map.
-The SlamToolboxPlugin for RVIZ2 was having issues with serializing the map data, so we had to save using the Ros2 map server instead. This gave us maps in different formats than what we needed for the Nav2 plugin, so we ended up having to troubleshoot the plugin itself. Reinstalling fixed the issue. We also had issues with people walking past the robot during the mapping process, which created "ghost walls" in the map. We ended up taking several maps and using the best one for navigation.
+The next problem came when saving the map. The SlamToolboxPlugin for RVIZ2 was having initially issues with serializing the map data, so we had to save using the ROS2 map server instead. This gave us maps in different formats than what we needed for the Nav2 plugin, so we ended up having to troubleshoot the plugin itself and reinstalling fixed the issue. We also had issues with people walking past the robot during the mapping process, which created "ghost walls" in the map. We ended up taking several maps and using the best one for navigation. We also had a simlilar problem with door ferames, where the reflective surface seemed to interfere with the lidar readings and cause it to see the wall as closer than it realy is
 
-Navigation - 
-Empty strings
-People walking through and affecting the scans
-Getting rid of initial doorway
+Lastly, we ran into one main problem with navigation, which we believe is due to some cross-talk in the USB protocol. We had this problem when reading the Pico from a PC as well, so this could be a problem with our unit and not our program. For now, we just repeat attempts until we get lucky and the connection doesn't throw out an error, but in the future, we would experiment with different types of connections (including ethernet) to establish a connection with minimal error.
 
 ## Summary
 Overall, the experience of designing and running the robot has been enjoyable, and we have learned many things throughout the process. The primary knowledge that we gained was regarding ROS, as we learned all of the basics through multiple tutorials. Then, we were able to apply that knowledge using the teleop_twist_key package and drive the robot. We also gained more insight into the design process and found how various complications could come up. However, by using our problem-solving skills, we were able to find solutions including using using FreeCAD to print platforms and adding weather stripping to create protective bumpers. Lastly, we found how effectively planning and considering many features could result in a working project!
+
+Additionally, we further
 
 Here is an early video of "The Fourth Amigo" running! https://youtube.com/shorts/EfjXouigjik?feature=share
 
