@@ -16,14 +16,6 @@ In this project, we strove to create a differential drive robot that could be co
 | Wheel Separation | 5.5 cm |
 | Ground Clearance | 7.26 cm |
 
-# Analysis
-
-## Robot Weight
-The weight of the robot was one of our initial concerns, and we consequently used lighter materials in the construction of the robot. We still used the aluminum extrusions for our base frame, but instead of using wood or metal for our second level, we used an acrylic sheet that would allow us to easily mount everything we needed. We also used a 3-D printer to print any extra additions we needed, including a mount for the PiCamera (which will be used in future projects), a base for the Lidar and RPi (using the same design as the one from last semester), and small platforms that allow us to lower our caster wheels to the same height as the skateboard wheels. In the end, the robot ended up having a mass of 5.2 kilograms (or 11.47 pounds).
-
-## Base Dimensions
-When considering the design for our robot, we were thinking ahead to the end goal and how we planned to use it when mapping out the CCCS building. To accomplish this, we decided to make the base of our robot a perfect square (or as close to one as we could make by cutting an acrylic sheet) with dimensions of 0.37 meters by 0.371 meters. This also allowed us to have more than enough space to mount all of our components. Lastly, we used the robot chassis design from last semester to create two layers, allowing us to mount our Lidar on top of the bot for future navigation projects. Overall, this addition made the height of the robot 0.22 meters.
-
 ![Acylic Sheet Blueprint](https://user-images.githubusercontent.com/112110593/220822932-0a08f132-286d-454d-8571-26bcb6e1f94d.JPG)
 ![Aluminum Extrusion Frame](https://user-images.githubusercontent.com/112110593/220675392-b7bee21e-1ffa-4ef2-9d62-bb76b9cf2d10.JPG)
 ![Side View - Robotics](https://user-images.githubusercontent.com/112110593/236246026-7b84e9dc-8f58-4fc0-ae7e-13c53edf4f3d.JPG)
@@ -32,21 +24,6 @@ When considering the design for our robot, we were thinking ahead to the end goa
 
 ## Wiring Diagram
 ![Circuit Diagram - Fourth Amigo](https://user-images.githubusercontent.com/112110593/220675232-cb4112af-a8b4-48c7-9ff0-9cb7bf532950.JPG)
-
-
-## Maximum Speed
-When determining the speed our robot, we used different methods for finding the linear and angular velocities of the robot. To determine the linear velocity, we set up markers at every meter along the floor for four meters. Then, we drove our robot forward at its maximum speed and used a stopwatch (with a lap feature) to find how long it took to reach marker. Then, we averaged each lap value to determine the overall speed of the bot, and we determined that it took around 2 seconds to reach each marker. Therefore, it had a maximum linear speed of 0.5 m/s.
-Next, we wanted to find the angular velocity, so we had the robot rotate in a circle for 2 rotations and determined how long it took to accomplish that task. In the end, it to 4.7 seconds to rotate twice, so it has an angular velocity of 0.85pi radians/s.
-
-## Payload Capacity
-To test the payload capacity, we added 2kg masses one by one onto our robot while it was running until the robot stopped working. However, after adding 6 of those masses, the robot was still functioning extremely well and we were risking destroying our acrylic sheet. Therefore, we stopped at that weight because we did not feel that it was worth risking our robot's functionality to add more weight. Overall, we determined that the payload capacity of our robot was at least 12 kilograms (or 26.46 pounds).
-
-## Battery Life Span
-When constructing the robot, we considered the battery life and decided to have two separate power supplies: one to power the motors and one to power the Raspberry Pi and the RPi Pico. Then, the batteries wouldn't be simultaneously drained by both components, and we could individually power each part. The first type of power supply uses three lithium ion batteries to power our motors, and we chose this specific method because the batteries were easily removable. Because of that, we wouldn't need to disassemble anything to recharge the batteries, and they would be much less dangerous that LiPo batteries. Our other power source would be an Anker Power Bank, which we could use to power the Pi and Pico. Since it would last much longer than the batteries, so it would need to be recharged less. The power bank has a few days worth of power, wheres the batteries for the motors can last for about two and a half hours until dropping to a voltage where they aren't fully effective (around 9V).
-
-## Safety Features
-One of the most important considerations that we had while designing our robot was involving safety features, since we want to make sure that our bot is safe to use. We considered two different types of safety additions: physical and software features. The main physical safety feature that we included was bumpers made of weather 
-stripping that could reduce damamge if the bot bumped into anything. It was placed strategically on the edges of the bot in order to maximize its efficiency. Additionally, we used tape to fasten our cables and ensure that they do not move around while the bot is in motion. We also include two different software features to terminate the program. The first is the KeyboardInterrupt, which occurs when the CTRL and C keys are pressed at the same time, ending the program. The other option is used when the K key is pressed while the driving program is running, and it reduced the angular and linear velocity to zero.
 
 ## Parts List
 
@@ -67,12 +44,72 @@ stripping that could reduce damamge if the bot bumped into anything. It was plac
 | RPLIDAR | Used to Guide the Robot and Judge Distances from Obstacles | 1 |
 | Pi Camera | Used to Guide the Robot and Analyze Surroundings | 1 |
 
-# Evaluation
+# Design Analysis
 
-## Future Additions
-As we designed our robot, we made sure that we left space for future additions that would be used in other projects. These additions included a Lidar for navigation, a Pi Camera, and a Raspberry Pi Pico that checks the rotary encoders in the motor. Additionally, we found and 3D-printed an adjustable mount for the Pi Camera, and also created a reel to hold the long ribbon cable. This will ensure that all of our components are easily accessible in the future and have a place to be effectively mounted.
+## Robot Weight
+The weight of the robot was one of our initial concerns, and we consequently used lighter materials in the construction of the robot. We still used the aluminum extrusions for our base frame, but instead of using wood or metal for our second level, we used an acrylic sheet that would allow us to easily mount everything we needed. We also used a 3-D printer to print any extra additions we needed, including a mount for the PiCamera, a base for the Lidar and RPi (using the same design as the one from last semester), and small platforms that allow us to lower our caster wheels to the same height as the skateboard wheels. In the end, the robot ended up having a mass of 5.2 kilograms (or 11.47 pounds).
 
-## Issues with Caster Wheels
+## Base Dimensions
+When considering the design for our robot, we were thinking ahead to the end goal and how we planned to use it when mapping out the CCCS building. To accomplish this, we decided to make the base of our robot a perfect square (or as close to one as we could make by cutting an acrylic sheet) with dimensions of 0.37 meters by 0.371 meters. This also allowed us to have more than enough space to mount all of our components. Lastly, we used the robot chassis design from last semester to create two layers, allowing us to mount our Lidar on top of the bot. Overall, this addition made the height of the robot 0.22 meters.
+
+## Maximum Speed
+When determining the speed our robot, we used different methods for finding the linear and angular velocities of the robot. To determine the linear velocity, we set up markers at every meter along the floor for four meters. Then, we drove our robot forward at its maximum speed and used a stopwatch (with a lap feature) to find how long it took to reach marker. Then, we averaged each lap value to determine the overall speed of the bot, and we determined that it took around 2 seconds to reach each marker. Therefore, it had a maximum linear speed of 0.5 m/s.
+Next, we wanted to find the angular velocity, so we had the robot rotate in a circle for 2 rotations and determined how long it took to accomplish that task. In the end, it to 4.7 seconds to rotate twice, so it has an angular velocity of 0.85pi radians/s.
+
+## Payload Capacity
+To test the payload capacity, we added 2kg masses one by one onto our robot while it was running until the robot stopped working. However, after adding 6 of those masses, the robot was still functioning extremely well and we were risking destroying our acrylic sheet. Therefore, we stopped at that weight because we did not feel that it was worth risking our robot's functionality to add more weight. Overall, we determined that the payload capacity of our robot was at least 12 kilograms (or 26.46 pounds).
+
+## Battery Life Span
+When constructing the robot, we considered the battery life and decided to have two separate power supplies: one to power the motors and one to power the Raspberry Pi and the RPi Pico. Then, the batteries wouldn't be simultaneously drained by both components, and we could individually power each part. The first type of power supply uses three lithium ion batteries to power our motors, and we chose this specific method because the batteries were easily removable. Because of that, we wouldn't need to disassemble anything to recharge the batteries, and they would be much less dangerous that LiPo batteries. Our other power source would be an Anker Power Bank, which we could use to power the Pi and Pico. Since it would last much longer than the batteries, so it would need to be recharged less. The power bank has a few days worth of power, wheres the batteries for the motors can last for about two and a half hours until dropping to a voltage where they aren't fully effective (around 9V).
+
+## Safety Features
+One of the most important considerations that we had while designing our robot was involving safety features, since we want to make sure that our bot is safe to use. We considered two different types of safety additions: physical and software features. The main physical safety feature that we included was bumpers made of weather 
+stripping that could reduce damamge if the bot bumped into anything. It was placed strategically on the edges of the bot in order to maximize its efficiency. Additionally, we used tape to fasten our cables and ensure that they do not move around while the bot is in motion. We also include two different software features to terminate the program. The first is the KeyboardInterrupt, which occurs when the CTRL and C keys are pressed at the same time, ending the program. The other option is used when the K key is pressed while the driving program is running, and it reduced the angular and linear velocity to zero.
+
+# Navigation and Mapping Discussion
+
+## Workflow of Navigation
+With the previous packages configured, we had the basic driving functionality needed to begin working on autonomous navigation using the Nav2 packages and the SLAM toolbox for ROS 2. Rviz2 was used to visualize LiDAR scans being processed by the slamtec RPLidar on the top of the robot. These readings allowed for an Rviz map which matched the environment that the LiDAR detected to be created. The Nav2 package then provides a waypoint navigation system that can be used to navigate between points in the LiDAR map. Lastly, a Raspberry Pi Pico was used to read the actual rotation rate of each motor on our robot to publish a bot_odom topic which detailed the real position of our robot in the world. With these functionalities, the bot can autonomously navigate between two points in a pre-mapped area.
+
+## Factors Affecting Mapping and Navigation
+As we were mapping out the hallway for future navigation, we ran into two main problems that were causing substantial error in the map. The first of these problems involved tire slipping due to low traction, which we remedied by removing the aluminum extrusion frame and adding two extra 1kg masses on top of the bot. This resulted in improved grip between the robot and the ground. The other main problem that we ran into was directional drift, which was caused by the slight unevenness of the wheels. To fix this, we used low driving speeds for the robot while mapping (about 16% speed) and gently nudged the robot along a straight path when it would begin to veer off course.
+
+The next problem came when saving the map. The SlamToolboxPlugin for RVIZ2 was having initially issues with serializing the map data, so we had to save using the ROS2 map server instead. This gave us maps in different formats than what we needed for the Nav2 plugin, so we ended up having to troubleshoot the plugin itself and reinstalling fixed the issue. We also had issues with people walking past the robot during the mapping process, which created "ghost walls" in the map. We ended up taking several maps and using the best one for navigation. We also had a simlilar problem with door ferames, where the reflective surface seemed to interfere with the lidar readings and cause it to see the wall as closer than it realy is
+
+Lastly, we ran into one main problem with navigation, which we believe is due to some cross-talk in the USB protocol. We had this problem when reading the Pico from a PC as well, so this could be a problem with our unit and not our program. For now, we just repeat attempts until we get lucky and the connection doesn't throw out an error, but in the future, we would experiment with different types of connections (including ethernet) to establish a connection with minimal error.
+
+# Summary
+Overall, the experience of designing and running the robot has been enjoyable, and we have learned many things throughout the process. The primary knowledge that we gained was regarding ROS, as we learned all of the basics through multiple tutorials. Then, we were able to apply that knowledge using the teleop_twist_key package and drive the robot. We also gained more insight into the design process and found how various complications could come up. However, by using our problem-solving skills, we were able to find solutions including using using FreeCAD to print platforms and adding weather stripping to create protective bumpers. Lastly, we found how effectively planning and considering many features could result in a working project!
+
+Additionally, we now have a further understanding of how to use ROS2 and can use it in conjunction with LiDAR (which we learned about in Robotics I) and Gazebo to create and navigate through a mapped area. This served as a valuable experience with coding, problem-solving, and designing a robot and adjusting our design based on the situation. It was also a great experience in working as part of a group, as each team member provided different skills and insights into the project. In the end, by working together, we ("The Three Amigos") were able to create a working robot that navigated through a designated path in Lewis Science Center! 
+
+Here is an early video of "The Fourth Amigo" running! https://youtube.com/shorts/EfjXouigjik?feature=share
+
+Here is the final video of "The Fourth Amigo" navigating through the hallway! https://youtu.be/RlqvqN4nuBk
+
+
+# Appendix
+
+## Parts List
+
+| Name | Description | Quantity |
+| --- | --- | --- |
+| Raspberry Pi | CPU Unit Used to Run Functions | 1 |
+| Raspberry Pi Pico | Used to Read Encoder Signals and Send PWM Signal to Driver | 1 |
+| High-torque Motors | Used to Drive the Bot | 2 |
+| Batteries | 3.7  V Lithium Ion Battery (Powers Motors) | 3 |
+| Anker Power Bank | Serves as a Power Source for the Pi and Pico | 1 |
+| Motor Driver Board | An Addition to the Raspberry Pi Unit That Allows Motors to Be Used | 1 |
+| 30x30 Aluminum Extrusions | Used to Construct the Base Frame of the Bot | 4 |
+| Skateboard Wheels | Used to Steer the Bot | 2 |
+| Caster Wheels | Used to Stabilize of the Bot and Guide its Motion | 2 |
+| Acrylic Sheet | Used as a Base to Attach Components | 1 |
+| Nuts and Bolts | Used to Attach Parts to the Bot | 8 |
+| Screws | Various Sized Screws Used to Attach Parts | 11 |
+| RPLIDAR | Used to Guide the Robot and Judge Distances from Obstacles | 1 |
+| Pi Camera | Used to Guide the Robot and Analyze Surroundings | 1 |
+
+## Early Issues with Caster Wheels
 Throughout the design process, the most common recurring issues have all been with the caster wheels. Initially, they were too high off the ground and caused the robot to not be level, so we used FreeCAD to create multiple platforms ranging from 5.5 to 6.4 millimeters. Eventually, we found that the 5.5 mm platforms were most effective and allowed the wheel to have more traction on a wide variety of terrains.
 
 ## Using ROS 
@@ -89,22 +126,3 @@ To run our robot, we needed to use ROS Humble, so we installed it on every teamm
 | backward_left | Negative | Negative |
 | backward_right | Negative | Positive |
 | STOP | Zero | Zero |
-
-## Workflow of Navigation
-With the previous packages configured, we had the basic driving functionality needed to begin working on autonomous navigation using the Nav2 packages and the SLAM toolbox for ROS 2. Rviz2 was used to visualize LiDAR scans being processed by the slamtec RPLidar on the top of the robot. These readings allowed for an Rviz map which matched the environment that the LiDAR detected to be created. The Nav2 package then provides a waypoint navigation system that can be used to navigate between points in the LiDAR map. Lastly, a Raspberry Pi Pico was used to read the actual rotation rate of each motor on our robot to publish a bot_odom topic which detailed the real position of our robot in the world. With these functionalities, the bot can autonomously navigate between two points in a pre-mapped area.
-
-## Factors Affecting Mapping and Navigation
-As we were mapping out the hallway for future navigation, we ran into two main problems that were causing substantial error in the map. The first of these problems involved tire slipping due to low traction, which we remedied by removing the aluminum extrusion frame and adding two extra 1kg masses on top of the bot. This resulted in improved grip between the robot and the ground. The other main problem that we ran into was directional drift, which was caused by the slight unevenness of the wheels. To fix this, we used low driving speeds for the robot while mapping (about 16% speed) and gently nudged the robot along a straight path when it would begin to veer off course.
-
-The next problem came when saving the map. The SlamToolboxPlugin for RVIZ2 was having initially issues with serializing the map data, so we had to save using the ROS2 map server instead. This gave us maps in different formats than what we needed for the Nav2 plugin, so we ended up having to troubleshoot the plugin itself and reinstalling fixed the issue. We also had issues with people walking past the robot during the mapping process, which created "ghost walls" in the map. We ended up taking several maps and using the best one for navigation. We also had a simlilar problem with door ferames, where the reflective surface seemed to interfere with the lidar readings and cause it to see the wall as closer than it realy is
-
-Lastly, we ran into one main problem with navigation, which we believe is due to some cross-talk in the USB protocol. We had this problem when reading the Pico from a PC as well, so this could be a problem with our unit and not our program. For now, we just repeat attempts until we get lucky and the connection doesn't throw out an error, but in the future, we would experiment with different types of connections (including ethernet) to establish a connection with minimal error.
-
-## Summary
-Overall, the experience of designing and running the robot has been enjoyable, and we have learned many things throughout the process. The primary knowledge that we gained was regarding ROS, as we learned all of the basics through multiple tutorials. Then, we were able to apply that knowledge using the teleop_twist_key package and drive the robot. We also gained more insight into the design process and found how various complications could come up. However, by using our problem-solving skills, we were able to find solutions including using using FreeCAD to print platforms and adding weather stripping to create protective bumpers. Lastly, we found how effectively planning and considering many features could result in a working project!
-
-Additionally, we now have a further understanding of how to use ROS2 and can use it in conjunction with LiDAR (which we learned about in Robotics I) and Gazebo to create and navigate through a mapped area. This served as a valuable experience with coding, problem-solving, and designing a robot and adjusting our design based on the situation. It was also a great experience in working as part of a group, as each team member provided different skills and insights into the project. In the end, by working together, we ("The Three Amigos") were able to create a working robot that navigated through a designated path in Lewis Science Center! 
-
-Here is an early video of "The Fourth Amigo" running! https://youtube.com/shorts/EfjXouigjik?feature=share
-
-Here is the final video of "The Fourth Amigo" navigating through the hallway! https://youtu.be/RlqvqN4nuBk
