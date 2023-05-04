@@ -16,6 +16,8 @@ In this project, we strove to create a differential drive robot that could be co
 | Wheel Separation | 5.5 cm |
 | Ground Clearance | 7.26 cm |
 
+
+## Blueprints
 ![Acylic Sheet Blueprint](https://user-images.githubusercontent.com/112110593/220822932-0a08f132-286d-454d-8571-26bcb6e1f94d.JPG)
 ![Aluminum Extrusion Frame](https://user-images.githubusercontent.com/112110593/220675392-b7bee21e-1ffa-4ef2-9d62-bb76b9cf2d10.JPG)
 ![Side View - Robotics](https://user-images.githubusercontent.com/112110593/236246026-7b84e9dc-8f58-4fc0-ae7e-13c53edf4f3d.JPG)
