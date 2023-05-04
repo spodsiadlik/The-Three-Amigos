@@ -25,25 +25,6 @@ In this project, we strove to create a differential drive robot that could be co
 ## Wiring Diagram
 ![Circuit Diagram - Fourth Amigo](https://user-images.githubusercontent.com/112110593/220675232-cb4112af-a8b4-48c7-9ff0-9cb7bf532950.JPG)
 
-## Parts List
-
-| Name | Description | Quantity |
-| --- | --- | --- |
-| Raspberry Pi | CPU Unit Used to Run Functions | 1 |
-| Raspberry Pi Pico | Used to Read Encoder Signals and Send PWM Signal to Driver | 1 |
-| High-torque Motors | Used to Drive the Bot | 2 |
-| Batteries | 3.7  V Lithium Ion Battery (Powers Motors) | 3 |
-| Anker Power Bank | Serves as a Power Source for the Pi and Pico | 1 |
-| Motor Driver Board | An Addition to the Raspberry Pi Unit That Allows Motors to Be Used | 1 |
-| 30x30 Aluminum Extrusions | Used to Construct the Base Frame of the Bot | 4 |
-| Skateboard Wheels | Used to Steer the Bot | 2 |
-| Caster Wheels | Used to Stabilize of the Bot and Guide its Motion | 2 |
-| Acrylic Sheet | Used as a Base to Attach Components | 1 |
-| Nuts and Bolts | Used to Attach Parts to the Bot | 8 |
-| Screws | Various Sized Screws Used to Attach Parts | 11 |
-| RPLIDAR | Used to Guide the Robot and Judge Distances from Obstacles | 1 |
-| Pi Camera | Used to Guide the Robot and Analyze Surroundings | 1 |
-
 # Design Analysis
 
 ## Robot Weight
